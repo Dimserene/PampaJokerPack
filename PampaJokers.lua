@@ -1742,7 +1742,6 @@ end
 
 local remove_from_deckref = Card.remove_from_deck
 function Card:remove_from_deck(from_debuff)
-    sendDebugMessage("remove from deck")
     local rem_ref = remove_from_deckref(self, from_debuff)
     if self.ability.name== "Fabric Design" then
         if self.ability.extra.added_to_deck then --dirty workaround because self.added_to_deck doesn't work ??
